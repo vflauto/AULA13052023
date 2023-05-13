@@ -1,1 +1,22 @@
 ExemploVetor1.java
+
+//ler um vetor de um tamanho escolhido pelo usuário e depois exibir os valores //na ordem inversa
+
+import java.util.Scanner;
+public class ExemploVetor1 {
+  public static void main(String[] args) {
+    Scanner entrada = new Scanner(System.in);
+    System.out.println("Digite o tamanho do vetor: ");
+    int tamanho = entrada.nextInt();
+    int[] v = new int[tamanho];
+    System.out.println("Agora digite " + tamanho + "valores");
+    for (int i = 0; i < v.length; i++) {
+      System.out.print("posicao " + i + ": ");
+      v[i] = entrada.nextInt();
+    }
+    System.out.println("Vou mostrar os valores ao contrario");
+    for (int i = v.length - 1; i >= 0; i--) {
+      System.out.print(v[i] + " ");
+    }
+    entrada.close();
+  }
